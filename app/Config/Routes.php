@@ -1,0 +1,230 @@
+<?php
+
+use CodeIgniter\Router\RouteCollection;
+
+/**
+ * @var RouteCollection $routes
+ */
+/* AuthController */
+$routes->get('/', 'AuthController::login', ['as' => 'home']);
+$routes->post('/home', 'AuthController::home');
+$routes->get('/home/index', 'AuthController::index');
+$routes->get('/home/destroy', 'AuthController::destroy');
+$routes->get('/home/account', 'AuthController::account');
+$routes->get('/forget', 'AuthController::forget');
+$routes->post('/home/account/upContra', 'AuthController::upContra');
+$routes->post('/check_token', 'AuthController::check_token');
+
+
+/* NominaController*/
+$routes->get('/home/newboard','NominaController::newboard');
+$routes->post('/home/newboard/saveNomina', 'NominaController::saveNomina');
+$routes->get('/home/newperiod', 'NominaController::newperiod');
+$routes->post('/home/saveperiod', 'NominaController::saveperiod');
+$routes->get('/home/periods/delete/(:num)', 'NominaController::delete/$1');
+$routes->post('/home/periods/saveExtras', 'NominaController::saveExtras');
+$routes->get('/home/archive/(:num)/(:segment)/(:segment)/(:segment)/(:segment)', 'NominaController::archive/$1/$2/$3/$4/$5');
+$routes->post('/home/archive/process', 'NominaController::process');
+$routes->get('/home/index/contracts', 'NominaController::contracts');
+$routes->get('/home/index/overtimes', 'NominaController::overtimes');
+$routes->post('/home/index/saveFirma', 'NominaController::saveFirma');
+$routes->get('/home/nomina/terminations', 'NominaController::terminations');
+$routes->post('/home/nomina/savefiniquito', 'NominaController::savefiniquito');
+$routes->get('/home/nomina/severance/(:num)/(:num)', 'NominaController::severance/$1/$2');
+$routes->get('/home/nomina/deleteseverance/(:num)', 'NominaController::deleteseverance/$1');
+$routes->get('/home/deletePeriodo/(:segment)/(:segment)/(:segment)/(:segment)','NominaController::deletePeriodo/$1/$2/$3/$4');
+$routes->get('/home/index/receipts', 'NominaController::receipts');
+$routes->get('/home/index/receiptss', 'NominaController::receiptss');
+$routes->get('/home/index/receipt/(:num)', 'NominaController::receipt/$1');
+$routes->get('/home/index/receiptt/(:num)', 'NominaController::receiptt/$1');
+$routes->post('/home/periods/guardarCambios', 'NominaController::guardarCambios');
+// ADMIN
+$routes->get('/home/nomina','NominaController::periodos');
+$routes->get('/home/board/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)','NominaController::board/$1/$2/$3/$4/$5');
+$routes->get('/home/periods/(:num)/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)', 'NominaController::periods/$1/$2/$3/$4/$5/$6');
+$routes->get('/home/aprov/(:num)/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)', 'NominaController::aprov/$1/$2/$3/$4/$5/$6');
+//Ing-Lic
+$routes->get('/home/index/history', 'NominaController::history');
+$routes->get('/home/signature/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)','NominaController::signature/$1/$2/$3/$4/$5');
+$routes->get('/home/banks/(:num)/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)', 'NominaController::banks/$1/$2/$3/$4/$5/$6');
+$routes->get('/home/admit/(:num)/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)', 'NominaController::admit/$1/$2/$3/$4/$5/$6');
+//RH 
+$routes->get('/home/index/capital', 'NominaController::capital');
+$routes->get('/home/accept/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)','NominaController::accept/$1/$2/$3/$4/$5');
+$routes->get('/home/data/(:num)/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)', 'NominaController::data/$1/$2/$3/$4/$5/$6');
+$routes->get('/home/access/(:num)/(:segment)/(:segment)/(:segment)/(:segment)/(:segment)', 'NominaController::access/$1/$2/$3/$4/$5/$6');
+/* ColaboratorsController */
+$routes->get('/home/newcolab','ColaboratorsController::newcolab');
+$routes->post('/home/newcolab/savecolab','ColaboratorsController::savecolab');
+$routes->get('/home/nomina/people', 'ColaboratorsController::people');
+$routes->get('/home/nomina/collaborators/(:num)', 'ColaboratorsController::collaborators/$1');
+$routes->post('/home/nomina/updatecolab','ColaboratorsController::updatecolab');
+$routes->get('/home/nomina/deletecolab/(:num)','ColaboratorsController::deletecolab/$1');
+$routes->get('/home/nomina/altacolab/(:num)','ColaboratorsController::altacolab/$1');
+$routes->get('/home/account/editpicture', 'ColaboratorsController::editpicture');
+$routes->post('/home/account/savepicture', 'ColaboratorsController::savepicture');
+$routes->get('/home/account/cv/(:num)', 'ColaboratorsController::cv/$1');
+$routes->post('/home/account/uploadarchive', 'ColaboratorsController::uploadarchive');
+$routes->get('/home/account/contract/(:num)', 'ColaboratorsController::contract/$1');
+$routes->get('/home/nomina/deletesistema/(:num)', 'ColaboratorsController::deletesistema/$1');
+$routes->post('/home/account/uploadcontract', 'ColaboratorsController::uploadcontract');
+$routes->post('/home/nomina/savedatabank', 'ColaboratorsController::savedatabank');
+$routes->post('/home/account/uploaddomicilio', 'ColaboratorsController::uploaddomicilio');
+$routes->post('/home/account/uploadestudios', 'ColaboratorsController::uploadestudios');
+$routes->post('/home/account/uploadrfc', 'ColaboratorsController::uploadrfc');
+$routes->post('/home/account/uploadbancarios', 'ColaboratorsController::uploadbancarios');
+$routes->post('/home/account/uploadbeneficiario', 'ColaboratorsController::uploadbeneficiario');
+$routes->post('/home/account/uploadine', 'ColaboratorsController::uploadine');
+$routes->post('/home/account/uploadcurp', 'ColaboratorsController::uploadcurp');
+$routes->post('/home/account/uploadactaNacimiento', 'ColaboratorsController::uploadactaNacimiento');
+/*EmailController*/
+$routes->post('/forget/validmail', 'EmailController::validmail');
+$routes->get('/resetpassword/(:num)/(:segment)', 'EmailController::resetpassword/$1/$2');
+$routes->post('/validpass', 'EmailController::validpass');
+/*AsistenciaController*/
+$routes->get('/home/assistence', 'AsistenciaController::assistence');
+$routes->post('/home/saveassistence', 'AsistenciaController::saveassistence');
+$routes->get('/home/output', 'AsistenciaController::output');
+$routes->post('/home/saveoutput', 'AsistenciaController::saveoutput');
+$routes->get('/home/analysis', 'AsistenciaController::analysis');
+$routes->get('/home/attendance', 'AsistenciaController::attendance');
+$routes->get('/home/analysis/history', 'AsistenciaController::history');
+$routes->post('/home/savecapture', 'AsistenciaController::savecapture');
+$routes->post('/home/saveedit', 'AsistenciaController::saveedit');
+$routes->post('/home/saveinputcolab', 'AsistenciaController::saveinputcolab');
+$routes->get('/home/permits/(:num)', 'AsistenciaController::permits/$1');
+$routes->post('/home/savepermit', 'AsistenciaController::savepermit');
+$routes->get('/home/eliminarP/(:num)/(:segment)', 'AsistenciaController::eliminarP/$1/$2');
+$routes->get('/home/permit', 'AsistenciaController::permit');
+$routes->get('/home/aprobP/(:num)', 'AsistenciaController::aprobP/$1');
+$routes->post('/home/savepermitDF', 'AsistenciaController::savepermitDF');
+$routes->post('/home/saveincidencia', 'AsistenciaController::saveincidencia');
+$routes->get('/home/deleteP/(:num)', 'AsistenciaController::deleteP/$1');
+$routes->get('/home/registro', 'AsistenciaController::registro');
+$routes->get('/home/permisos', 'AsistenciaController::permisos');
+$routes->get('/home/incidence/(:num)', 'AsistenciaController::incidence/$1');
+$routes->get('/home/eliminarPP/(:num)', 'AsistenciaController::eliminarPP/$1');
+$routes->get('/home/event', 'AsistenciaController::event');
+$routes->post('/home/closeincidencia', 'AsistenciaController::closeincidencia');
+$routes->post('/home/savegestion', 'AsistenciaController::savegestion');
+$routes->get('/home/incidence/gestion/(:num)/(:num)', 'AsistenciaController::gestion/$1/$2');
+$routes->get('/home/incidence/reposicion/(:num)/(:num)', 'AsistenciaController::reposicion/$1/$2');
+$routes->post('/home/saveprimer', 'AsistenciaController::saveprimer');
+$routes->post('/home/savepermitt', 'AsistenciaController::savepermitt');
+$routes->post('/home/saveincidenciaa', 'AsistenciaController::saveincidenciaa');
+$routes->post('/home/savefinsemana', 'AsistenciaController::savefinsemana');
+$routes->post('/home/saveExtras', 'AsistenciaController::saveExtras');
+$routes->get('/home/hours/(:num)', 'AsistenciaController::hours/$1');
+$routes->get('/home/vacations/(:num)', 'AsistenciaController::vacations/$1');
+$routes->get('/home/extras', 'AsistenciaController::extras');
+$routes->get('/home/incidencias', 'AsistenciaController::incidencias');
+$routes->get('/home/market', 'AsistenciaController::market');
+$routes->get('/home/list/(:segment)/(:segment)', 'AsistenciaController::list/$1/$2');
+$routes->post('/home/savevacas', 'AsistenciaController::savevacas');
+$routes->get('/home/edit/(:num)/(:num)/(:num)/(:segment)/(:segment)/(:num)/(:num)', 'AsistenciaController::edit/$1/$2/$3/$4/$5/$6/$7');
+$routes->post('/home/savevacasedit', 'AsistenciaController::savevacasedit');
+$routes->get('/home/eliminarV/(:num)', 'AsistenciaController::eliminarV/$1');
+$routes->get('/home/vacaciones', 'AsistenciaController::vacaciones');
+$routes->post('/home/savevacasadmin', 'AsistenciaController::savevacasadmin');
+$routes->get('/home/editvaccap/(:num)/(:num)/(:segment)/(:segment)/(:num)/(:num)', 'AsistenciaController::editvaccap/$1/$2/$3/$4/$5/$6');
+$routes->post('/home/savevacaseditadmin', 'AsistenciaController::savevacaseditadmin');
+$routes->get('/home/deleteVacax/(:num)', 'AsistenciaController::deleteVacax/$1');
+$routes->post('/home/document', 'AsistenciaController::document');
+/* PerformanceController*/
+$routes->get('/home/performance', 'PerformanceController::performance');
+$routes->post('/home/guardarComentario', 'PerformanceController::guardarComentario');
+$routes->get('/home/deletecomen/(:num)', 'PerformanceController::deletecomen/$1');
+$routes->get('/home/deletefed/(:num)', 'PerformanceController::deletefed/$1');
+$routes->get('/home/delHabi/(:num)', 'PerformanceController::delHabi/$1');
+$routes->get('/home/delCurso/(:num)', 'PerformanceController::delCurso/$1');
+$routes->get('/home/delObject/(:num)', 'PerformanceController::delObject/$1');
+$routes->post('/home/delUser', 'PerformanceController::delUser');
+$routes->get('/home/eliminarEncs/(:num)', 'PerformanceController::eliminarEncs/$1');
+$routes->get('/home/eliminarPreg/(:num)/(:num)', 'PerformanceController::eliminarPreg/$1/$2');
+$routes->post('/home/savefedback', 'PerformanceController::savefedback');
+$routes->post('/home/savechanges', 'PerformanceController::savechanges');
+$routes->get('/home/performance/edit/(:num)', 'PerformanceController::edit/$1');
+$routes->post('/home/savemodulos', 'PerformanceController::savemodulos');
+$routes->post('/home/saveEvents', 'PerformanceController::saveEvents');
+$routes->post('/home/editEvents', 'PerformanceController::editEvents');
+$routes->post('/home/editEventsLugar', 'PerformanceController::editEventsLugar');
+$routes->get('/home/verC', 'PerformanceController::calendar');
+$routes->post('/home/saveHabi', 'PerformanceController::saveHabi');
+$routes->post('/home/saveHabiEdit', 'PerformanceController::saveHabiEdit');
+$routes->get('/home/aprendizaje', 'PerformanceController::aprendizaje');
+$routes->get('/home/onboarding', 'PerformanceController::onboarding');
+$routes->get('/home/encuestas', 'PerformanceController::encuestas');
+$routes->get('/home/ciclos', 'PerformanceController::ciclos');
+$routes->post('/home/upload', 'PerformanceController::upload');
+$routes->post('/home/savecurso', 'PerformanceController::savecurso');
+$routes->get('/home/aprendizaje/nuevaM/(:num)', 'PerformanceController::nuevaM/$1');
+$routes->post('/home/savecCursoEdit', 'PerformanceController::savecCursoEdit');
+$routes->get('/home/aprendizaje/certificado/(:num)/(:num)', 'PerformanceController::certificado/$1/$2');
+$routes->post('/home/saveObjetivo', 'PerformanceController::saveObjetivo');
+$routes->post('/home/saveProgress', 'PerformanceController::saveProgress');
+$routes->get('/home/onboarding/checklist/(:num)/(:segment)', 'PerformanceController::checklist/$1/$2');
+$routes->post('/home/saveOnboarding', 'PerformanceController::saveOnboarding');
+$routes->post('/home/saveOnboardingEdit', 'PerformanceController::saveOnboardingEdit');
+$routes->post('/home/savelistcheck', 'PerformanceController::savelistcheck');
+$routes->post('/home/savelistaEdit', 'PerformanceController::savelistaEdit');
+$routes->post('/home/saveOnboardingEditData', 'PerformanceController::saveOnboardingEditData');
+$routes->post('/home/saveidencuesta', 'PerformanceController::saveidencuesta');
+$routes->get('/home/delOnboarding/(:num)', 'PerformanceController::delOnboarding/$1');
+$routes->get('/home/urlprueba/(:num)', 'PerformanceController::urlprueba/$1');
+$routes->get('/home/review', 'PerformanceController::review');
+$routes->get('/home/review/new_review', 'PerformanceController::newreview');
+$routes->get('/home/encuestas/responder/(:num)/(:any)', 'PerformanceController::responder/$1/$2');
+$routes->post('/home/saveencuesta', 'PerformanceController::saveencuesta');
+$routes->post('/home/saveencuestaEdit', 'PerformanceController::saveencuestaEdit');
+$routes->post('/home/saveEditEncuesta', 'PerformanceController::saveEditEncuesta');
+$routes->post('/home/guardarResultados', 'PerformanceController::guardarResultados');
+$routes->post('/home/savecicle', 'PerformanceController::savecicle');
+$routes->get('/home/review/edit/(:num)', 'PerformanceController::editEncuesta/$1');
+$routes->get('/home/review/deleterespuestas/(:num)/(:num)', 'PerformanceController::deleterespuestas/$1/$2');
+$routes->get('/home/encuestas/respuestas/(:num)/(:any)', 'PerformanceController::respuestas/$1/$2');
+$routes->get('/home/review/verespuestas/(:num)/(:num)/(:any)', 'PerformanceController::verespuestas/$1/$2/$3');
+$routes->get('/home/ciclos/ver/(:num)', 'PerformanceController::ver/$1');
+$routes->get('/home/cicles', 'PerformanceController::cicles');
+$routes->get('/home/cicles/new_cicle', 'PerformanceController::newCicle');
+$routes->get('/home/cicle/edit/(:num)', 'PerformanceController::editCicle/$1');
+$routes->post('/home/saveidcicle', 'PerformanceController::saveidcicle');
+$routes->post('/home/savecicleedit', 'PerformanceController::savecicleedit');
+
+/* TalentController */
+
+$routes->get('/home/applicants', 'TalentController::applicants');
+$routes->get('/home/applicants/form/(:num)', 'TalentController::formdetails/$1');
+$routes->get('/home/forms', 'TalentController::forms');
+$routes->post('/home/saveform', 'TalentController::saveform');
+$routes->post('/saveRespuestasAplicantes', 'TalentController::saveRespuestasAplicantes');
+$routes->post('/saveFormsAplicantEdit', 'TalentController::saveFormsAplicantEdit');
+$routes->post('/saveeditCalendly', 'TalentController::saveeditCalendly');
+$routes->post('/saveEditFormAplicant', 'TalentController::saveEditFormAplicant');
+$routes->get('/home/forms/nuevo/(:segment)', 'TalentController::nuevoForm/$1');
+$routes->get('/form_applicant/(:any)', 'TalentController::form_applicant/$1');
+$routes->get('/home/forms/edit/(:num)/(:any)', 'TalentController::editForm/$1/$2');
+$routes->get('/home/eliminarPregForm/(:num)/(:num)/(:any)', 'TalentController::eliminarPregForm/$1/$2/$3');
+$routes->get('/home/eliminarForm/(:num)', 'TalentController::eliminarForm/$1');
+$routes->get('/home/clonar/(:any)', 'TalentController::clonar/$1');
+$routes->get('/home/applicants/details/(:num)/(:num)', 'TalentController::detailsapp/$1/$2');
+$routes->get('/home/delAplicant/(:num)/(:num)', 'TalentController::delAplicant/$1/$2');
+$routes->get('/home/applicants/viable/(:num)/(:num)', 'TalentController::viable/$1/$2');
+$routes->get('/home/applicants/proceso/(:num)', 'TalentController::proceso/$1');
+$routes->get('/home/applicants/formato/(:num)/(:num)', 'TalentController::formato/$1/$2');
+$routes->post('/saveFormato', 'TalentController::saveFormato');
+$routes->post('/home/applicants/saveprueba', 'TalentController::saveprueba');
+$routes->get('/home/applicants/formato/(:num)/(:num)', 'TalentController::formato/$1/$2');
+$routes->get('/home/applicants/prueba/(:num)/(:num)', 'TalentController::prueba/$1/$2');
+$routes->get('/home/ats', 'TalentController::ats');
+$routes->get('/home/eliminarCands/(:num)/(:any)', 'TalentController::eliminarCands/$1/$2');
+$routes->get('/home/applicants/calendly', 'TalentController::calendly');
+$routes->get('/home/ats/form/(:num)', 'TalentController::formPrueba/$1');
+$routes->post('/home/ats/saveEditPrueba', 'TalentController::saveEditPrueba');
+$routes->get('/home/delAplicantPrueba/(:num)/(:num)', 'TalentController::delAplicantPrueba/$1/$2');
+$routes->get('/home/ats/final/(:num)', 'TalentController::final/$1');
+$routes->get('/home/ats/candidat/(:num)/(:num)', 'TalentController::candidat/$1/$2');
+$routes->get('/form_candidat/(:num)/(:any)', 'TalentController::form_candidat/$1/$2');
+$routes->post('/home/ats/savetypecand', 'TalentController::savetypecand');
+
+/* DocumentsController */
+$routes->post('/home/ats/save_new', 'DocumentosController::save_new');

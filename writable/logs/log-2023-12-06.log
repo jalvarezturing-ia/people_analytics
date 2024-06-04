@@ -1,0 +1,9 @@
+CRITICAL - 2023-12-06 23:37:42 --> Invalid file: "welcome_message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('welcome_message.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('welcome_message', [], true)
+ 3 APPPATH\Controllers\AuthController.php(9): view('welcome_message')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

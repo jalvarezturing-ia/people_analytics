@@ -1,0 +1,504 @@
+.search-box {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.search-box label {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-box input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px; /* Ajusta el ancho según sea necesario */
+  transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.ver-periodo-btn1 {
+  color: #db3434; /* Color del texto */
+  background-color: #fedfdf; /* Color de fondo */
+  padding: 8px 15px; /* Ajusta el espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 14px; /* Tamaño del texto */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave del color de fondo y del texto */
+}
+
+.ver-periodo-btn1:hover {
+  background-color: #df8686; /* Cambia el color de fondo al pasar el mouse */
+  color: #fedfdf; /* Cambia el color del texto al pasar el mouse */
+}
+
+.ver-periodo-btn {
+  color: #3498db; /* Color del texto */
+  background-color: #dff2fe; /* Color de fondo */
+  padding: 8px 15px; /* Ajusta el espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 14px; /* Tamaño del texto */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave del color de fondo y del texto */
+}
+
+.ver-periodo-btn:hover {
+  background-color: #aedbf3; /* Cambia el color de fondo al pasar el mouse */
+  color: #2980b9; /* Cambia el color del texto al pasar el mouse */
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  /* background-color: #F8FAFC; */
+}
+
+th {
+  padding: 12px;
+
+  border-bottom: 1px solid #ddd;
+  color: #707070;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  color: #000000;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
+
+.reaction-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.reaction-buttons button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.reaction-buttons button i {
+  color: #555;
+  /* Color predeterminado de los iconos */
+}
+
+.reaction-count {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.reaction-buttons button.like {
+  color: blue;
+  /* Color para "Me gusta" */
+}
+
+.reaction-buttons button.love {
+  color: red;
+  /* Color rojo en hover */
+}
+
+.reaction-buttons button.surprise {
+  color: green;
+  /* Color para "Me asombra" */
+}
+
+.reaction-buttons button:hover {
+  transform: scale(1.2);
+  /* Aumenta el tamaño en hover */
+}
+
+.title-wish {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4070f4;
+}
+
+.merry-christmas {
+  font-size: 28px;
+
+  color: #e44d26;
+  /* Rojo festivo */
+}
+
+.team-name {
+  font-size: 24px;
+  color: #f39c12;
+  /* Amarillo festivo */
+}
+
+.festive-strong {
+  color: #e44d26;
+  /* Verde festivo */
+}
+
+@keyframes santaRun {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+#santa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  animation: santaRun 10s linear infinite;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  #santa {
+    visibility: hidden;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0; /* Cambiado de 25px a 0 */
+  max-width: calc(
+    105% - 50px
+  ); /* Ancho máximo del contenedor menos los márgenes */
+  overflow: auto; /* Agregar desplazamiento automático en caso de desbordamiento */
+}
+
+.info-card {
+  flex: 1;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.info-card.vertical {
+  flex-basis: 60%;
+}
+
+.info-card.small {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+#indeximg {
+  text-align: center;
+  width: 1000px;
+  height: 290px;
+  border-radius: 10px;
+}
+#clientimg {
+  display: block; /* Establece la imagen como un bloque */
+  margin: 0 auto; /* Establece los márgenes automáticos para centrar horizontalmente */
+  width: 600px; /* Establece el ancho de la imagen */
+}
+
+.line {
+  height: 1px;
+  background-color: #ced4da;
+  margin: 10px 0;
+}
+
+.card-header {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+/* Media Queries para dispositivos de tamaño medio (tablets) */
+@media screen and (max-width: 1024px) {
+  .info-card {
+    margin: 20px 20px 20px 0;
+    flex-basis: calc(
+      50% - 20px
+    ); /* Restar el margen para ajustar correctamente */
+  }
+}
+
+/* Media Queries para dispositivos pequeños (teléfonos) */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Cambiar a una sola columna en teléfonos */
+    margin: 20px 20px 20px 0;
+  }
+
+  .info-card {
+    flex-basis: calc(
+      100% - 20px
+    ); /* Restar el margen para ocupar todo el ancho */
+    margin: 20px 20px 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 20px 20px 20px 0;
+    /* Modificado el margen a 20px en la parte superior, derecha y inferior, y 0 en la izquierda */
+  }
+
+  .info-card {
+    flex-basis: 100%;
+  }
+}
+
+.author {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.comments {
+  margin: 20px 0;
+}
+
+#contenido {
+  border: none;
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f6f6f6;
+}
+
+.comment {
+  border: none;
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f6f6f6;
+}
+
+@media (max-width: 768px) {
+  #usrimg {
+    display: none;
+  }
+}
+
+.card-box {
+  position: relative;
+  color: #fff;
+  padding: 20px 10px 40px;
+  margin: 20px 0px;
+  border-radius: 1em;
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+}
+
+.card-box:hover {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.card-box:hover .icon i {
+  font-size: 100px;
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+
+.card-box .inner {
+  padding: 5px 10px 0 10px;
+}
+
+.swal-wide {
+  width: 1080px !important;
+}
+
+.card-box h3 {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  white-space: nowrap;
+  padding: 0;
+  text-align: left;
+}
+
+.card-box p {
+  font-size: 18px;
+  color: #f1f1f1;
+}
+
+.card-box .icon {
+  position: absolute;
+  top: auto;
+  bottom: 5px;
+  right: 5px;
+  z-index: 0;
+  font-size: 72px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.card-box .card-box-footer {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+  padding: 3px 0;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-decoration: none;
+  border-radius: 4em;
+}
+
+.card-box:hover .card-box-footer {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bg-blue {
+  background-color: #4070f4 !important;
+}
+
+.bg-green {
+  background-color: #4070f4 !important;
+}
+
+.bg-orange {
+  background-color: #f39c12 !important;
+}
+
+.bg-red {
+  background-color: #d9534f !important;
+}
+
+.green-border-table {
+  border-left: 5px solid green;
+  /* Ancho y color de la franja izquierda */
+}
+
+/* Opcional: Ajusta el espacio entre la franja y el contenido de la tabla */
+.green-border-table td {
+  padding-left: 10px;
+  /* Ajusta según sea necesario */
+}
+
+.red-border-table {
+  border-left: 5px solid red;
+  /* Ancho y color de la franja izquierda */
+}
+
+/* Opcional: Ajusta el espacio entre la franja y el contenido de la tabla */
+.red-border-table td {
+  padding-left: 10px;
+  /* Ajusta según sea necesario */
+}
+
+@keyframes santaRun {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+#santa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  animation: santaRun 10s linear infinite;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  #santa {
+    visibility: hidden;
+  }
+}
+
+.santa-hat-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.santa-hat-img {
+  width: 85%;
+  height: auto;
+  margin-top: -25px;
+}
+
+.ver-periodo-btn2 {
+  color: #34db6c;
+  /* Color del texto */
+  background-color: #e1fedf;
+  /* Color de fondo */
+  padding: 8px 15px;
+  /* Ajusta el espaciado interno */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  text-decoration: none;
+  /* Sin subrayado */
+  font-size: 14px;
+  /* Tamaño del texto */
+  transition: background-color 0.3s, color 0.3s;
+  /* Transición suave del color de fondo y del texto */
+  border: none;
+  /* Quita el borde del botón */
+  cursor: pointer;
+  /* Cambia el cursor al pasar el mouse sobre el botón */
+}
+
+.ver-periodo-btn2:hover {
+  background-color: #34db6c;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: #e1fedf;
+  /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Agrega estilos para la clase 'activo' */
+.ver-periodo-btn.activo {
+  color: #ffff;
+  background-color: #1371c7;
+}
+
+@media (max-width: 768px) {
+  .ver-periodo-btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
