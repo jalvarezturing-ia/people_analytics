@@ -17,8 +17,8 @@ class App extends BaseConfig
      *    http://example.com/
      */
     //public string $baseURL = 'http://192.168.1.75/Turing-IA/public/';
-    public string $baseURL = 'http://localhost/Turing-IA/public/';
-    // public string $baseURL = 'https://people.turing-latam.com/public/';
+    // public string $baseURL = 'http://localhost/Turing-IA/public/';
+    public string $baseURL = 'https://people.turing-latam.com/public/';
     //public string $baseURL = 'http://localhost:8080/';
     public $appENV = 'development'; 
 
