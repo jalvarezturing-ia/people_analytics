@@ -86,7 +86,7 @@
           <div class="col-xl-5 col-xxl-4">
             <div class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
               <div class="auth-max-width col-sm-8 col-md-6 col-xl-7 px-4">
-                <h2 class="mb-1 fs-6 fw-bolder text-center">Bienvenido a People Analytics</h2>
+                <h2 class="mb-1 fs-6 fw-bolder text-center">Bienvenido a People Analytics Pepa</h2>
                 <p class="mb-7 text-center">El panel de administración de Turing-IA </p>
                 <div class="row">
                   <!-- <div class="col-12 mb-2 mb-sm-0"> -->

@@ -45,8 +45,6 @@ class AuthController extends BaseController
         echo "</pre>";
         exit();
 
-
-        
         /* obtiene los valores que llegan del login y los almacena en sesiones */
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
