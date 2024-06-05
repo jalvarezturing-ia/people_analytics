@@ -40,10 +40,10 @@ class AuthController extends BaseController
     public function home()
     {
 
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
-        exit();
+        // echo "<pre>";
+        // print_r($_POST);
+        // echo "</pre>";
+        // exit();
 
         /* obtiene los valores que llegan del login y los almacena en sesiones */
         $email = $this->request->getPost('email');
