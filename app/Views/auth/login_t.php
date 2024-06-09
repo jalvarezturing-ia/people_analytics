@@ -67,14 +67,14 @@
   <div class="preloader">
     <img src="<?php echo base_url("gifs/logo.svg"); ?>" alt="loader" class="lds-ripple img-fluid" />
   </div>
-  <div id="main-wrapper" class="auth-customizer-none">
+  <div id="main-wrapper" class="auth-customizer-none" style="background-color: rgb(255, 255, 255) ;" >
     <div class="position-relative overflow-hidden radial-gradient min-vh-100 w-100">
       <div class="position-relative z-index-5">
         <div class="row">
           <div class="col-xl-7 col-xxl-8">
             <a href="https://www.turing-ia.com/" class="text-nowrap logo-img d-block px-4 py-9 w-100" target="_blank">
-              <img src="https://bootstrapdemos.adminmart.com/modernize/dist/assets/images/logos/dark-logo.svg"
-                class="dark-logo" alt="Logo-Dark" />
+              <!-- <img src="https://bootstrapdemos.adminmart.com/modernize/dist/assets/images/logos/dark-logo.svg"
+                class="dark-logo" alt="Logo-Dark" /> -->
             </a>
             <div class="d-none d-xl-flex align-items-center justify-content-center h-n80">
               <!-- <img src="https://www.analytics4people.com/images/65b0dd8b3b4c1313045372.gif" alt="modernize-img" -->
@@ -86,41 +86,42 @@
           <div class="col-xl-5 col-xxl-4">
             <div class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
               <div class="auth-max-width col-sm-8 col-md-6 col-xl-7 px-4">
-                <h2 class="mb-1 fs-6 fw-bolder text-center">Bienvenido a People Analytics</h2>
+                <h2 class="mb-1 fs-6 fw-bolder text-center">Bienvenido a <span style="color:rgb(93, 135, 255);">People Analytics</span></h2>
                 <p class="mb-7 text-center">El panel de administración de Turing-IA </p>
                 <div class="row">
-                  <!-- <div class="col-12 mb-2 mb-sm-0"> -->
-                  <div class="col-6 mb-2 mb-sm-0">
+                  <div class="col-12 mb-2 mb-sm-0">
+                  <!-- <div class="col-6 mb-2 mb-sm-0"> -->
                     <a class="btn text-dark border fw-normal d-flex align-items-center justify-content-center rounded-2 py-8"
                       href="javascript:void(0)" role="button">
-                      <img src="https://bootstrapdemos.adminmart.com/modernize/dist/assets/images/svgs/google-icon.svg"
+                      <!-- <img src="https://bootstrapdemos.adminmart.com/modernize/dist/assets/images/svgs/google-icon.svg" -->
+                      <img src="<?php echo base_url("gifs/fondo.png"); ?>"
                         alt="modernize-img" class="img-fluid me-2" width="18" height="18">
-                      <span class="flex-shrink-0">Con Google</span>
+                      <span class="flex-shrink-0"></span>
                     </a>
                   </div>
-                  <div class="col-6">
+                  <!-- <div class="col-6">
                     <a class="btn text-dark border fw-normal d-flex align-items-center justify-content-center rounded-2 py-8"
                       href="javascript:void(0)" role="button">
                       <img src="https://www.svgrepo.com/show/448243/okta.svg" alt="modernize-img" class="img-fluid me-2"
                         width="22" height="22">
                       <span class="flex-shrink-0">Con Okta</span>
                     </a>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="position-relative text-center my-4">
-                  <p class="mb-0 fs-4 px-3 d-inline-block bg-body text-dark z-index-5 position-relative">o inicie sesión
+                  <p class="mb-0 fs-4 px-3 d-inline-block bg-body text-dark z-index-5 position-relative">Inicie sesión
                     con</p>
                   <span class="border-top w-100 position-absolute top-50 start-50 translate-middle"></span>
                 </div>
                 <form id="login-form" action="<?php echo base_url('/home'); ?>" method="POST">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="example@turing-ia.com"
                       value="<?= session('email') ?? '' ?>" required autofocus>
                   </div>
                   <div class="mb-4">
                     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
+                    <input type="password" class="form-control" id="password" name="password" required placeholder="*********" >
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-4">
                     <!-- <div class="form-check">
@@ -129,7 +130,7 @@
                         Recordar sesión
                       </label>
                     </div> -->
-                    <a class="text-primary fw-medium fs-3" href="<?php echo base_url("/forget"); ?>">Olvidaste
+                    <a class="text-primary fw-medium fs-3" href="<?php echo base_url("/forget"); ?>">¿Olvidaste
                       tu
                       contraseña?</a>
                   </div>
