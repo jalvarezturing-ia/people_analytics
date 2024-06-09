@@ -16,8 +16,9 @@
 </head>
 
 <style>
-  #main-wrapper {
-    /* font-family: "Century Gothic"; */
+
+  #main-wrapper{
+    background-color: #FFFFFF !important;
   }
 
   body.loading::before {
@@ -67,7 +68,7 @@
   <div class="preloader">
     <img src="<?php echo base_url("gifs/logo.svg"); ?>" alt="loader" class="lds-ripple img-fluid" />
   </div>
-  <div id="main-wrapper" class="auth-customizer-none" style="background-color: rgb(255, 255, 255) ;" >
+  <div id="main-wrapper" class="auth-customizer-none" >
     <div class="position-relative overflow-hidden radial-gradient min-vh-100 w-100">
       <div class="position-relative z-index-5">
         <div class="row">
@@ -76,9 +77,9 @@
               <!-- <img src="https://bootstrapdemos.adminmart.com/modernize/dist/assets/images/logos/dark-logo.svg"
                 class="dark-logo" alt="Logo-Dark" /> -->
             </a>
-            <div class="d-none d-xl-flex align-items-center justify-content-center h-n80">
+            <div class="d-none d-xl-flex align-items-center justify-content-center h-n80"  >
               <!-- <img src="https://www.analytics4people.com/images/65b0dd8b3b4c1313045372.gif" alt="modernize-img" -->
-              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/20cbc327254929.5636217b45702.gif"
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/20cbc327254929.5636217b45702.gif" style="border-radius:2rem;"
                 alt="modernize-img" class="img-fluid" width="700">
               <!-- <img src="https://bootstrapdemos.adminmart.com/modernize/dist/assets/images/backgrounds/login-security.svg" alt="modernize-img" class="img-fluid" width="500"> -->
             </div>
@@ -87,7 +88,7 @@
             <div class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
               <div class="auth-max-width col-sm-8 col-md-6 col-xl-7 px-4">
                 <h2 class="mb-1 fs-6 fw-bolder text-center">Bienvenido a <span style="color:rgb(93, 135, 255);">People Analytics</span></h2>
-                <p class="mb-7 text-center">El panel de administración de Turing-IA </p>
+                <p class="mb-7 text-center">El panel de administración de <span style="color:rgb(93, 135, 255);">Turing-IA</span></p>
                 <div class="row">
                   <div class="col-12 mb-2 mb-sm-0">
                   <!-- <div class="col-6 mb-2 mb-sm-0"> -->
@@ -127,7 +128,7 @@
                     <!-- <div class="form-check">
                       <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
                       <label class="form-check-label text-dark fs-3" for="flexCheckChecked">
-                        Recordar sesión
+                        Recordarme
                       </label>
                     </div> -->
                     <a class="text-primary fw-medium fs-3" href="<?php echo base_url("/forget"); ?>">¿Olvidaste

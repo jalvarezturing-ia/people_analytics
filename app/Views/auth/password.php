@@ -65,7 +65,7 @@
 <body>
   <!-- Preloader -->
   <div class="preloader">
-    <img src="#!" alt="loader" class="lds-ripple img-fluid" />
+  <img src="<?php echo base_url("gifs/logo.svg"); ?>" alt="loader" class="lds-ripple img-fluid" />
   </div>
   <div id="main-wrapper" class="auth-customizer-none">
     <div class="position-relative overflow-hidden radial-gradient min-vh-100 w-100">
@@ -86,7 +86,7 @@
               <div class="auth-max-width mx-auto d-flex align-items-center w-100 h-100">
                 <div class="card-body">
                   <div class="mb-5">
-                    <h2 class="fw-bolder fs-7 mb-3  text-center">Olvidaste tu contraseña<a href="#"
+                    <h2 class="fw-bolder fs-7 mb-3  text-center" style="color:rgb(93, 135, 255);">¿Olvidaste tu contraseña<a href="#" style="color:rgb(93, 135, 255);"
                         onclick="help(event)">?</a></h2>
                     <p class="mb-0 text-center">
                       Introduce la dirección de correo electrónico y el número de teléfono asociada a tu cuenta y le
@@ -97,11 +97,11 @@
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
                       <input type="email" id="email" name="email" class="form-control"
-                        value="<?= session('email') ?? '' ?>" aria-describedby="emailHelp" required>
+                        value="<?= session('email') ?? '' ?>" aria-describedby="emailHelp" required placeholder="example@turing-ia.com">
                     </div>
                     <div class="mb-4">
                       <label for="exampleInputPassword1" class="form-label">Teléfono</label>
-                      <input type="number" id="telefono" name="telefono" class="form-control" required>
+                      <input type="number" id="telefono" name="telefono" class="form-control" required placeholder="7121448436">
                     </div>
                     <button type="submit" class="btn btn-primary w-100 py-8 mb-3">Enviar</button>
                     <a href="<?php echo base_url("/"); ?>"
